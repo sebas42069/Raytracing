@@ -24,7 +24,6 @@ namespace Template
 	public class OpenTKApp : GameWindow
 	{
 		static int screenID;            // unique integer identifier of the OpenGL texture
-		//static int VBO;
 		static MyApplication app;       // instance of the application
 		static bool terminated = false; // application terminates gracefully when this is true
 		protected override void OnLoad( EventArgs e )
@@ -36,7 +35,6 @@ namespace Template
 			app.screen = new Surface( Width, Height );
 			Sprite.target = app.screen;
 			screenID = app.screen.GenTexture();
-			//VBO = GL.GenBuffer();
 			app.Init();
 		}
 		protected override void OnUnload( EventArgs e )

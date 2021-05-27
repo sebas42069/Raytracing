@@ -1,0 +1,11 @@
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\bin\Debug\INFOGR2019Tmpl8.exe.config
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\bin\Debug\INFOGR2019Tmpl8.exe
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\bin\Debug\INFOGR2019Tmpl8.pdb
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\bin\Debug\OpenTK.dll
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\bin\Debug\OpenTK.pdb
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\bin\Debug\OpenTK.xml
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\obj\Debug\Template.csprojAssemblyReference.cache
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\obj\Debug\Template.csproj.CoreCompileInputs.cache
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\obj\Debug\Template.csproj.CopyComplete
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\obj\Debug\INFOGR2019Tmpl8.exe
+C:\Users\sebas\OneDrive\Documenten\Uni\Graphics\Raytracing\obj\Debug\INFOGR2019Tmpl8.pdb
