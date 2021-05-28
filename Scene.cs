@@ -13,17 +13,19 @@ namespace INFOGR2019Tmpl8
         public List<Primitive> primitives = new List<Primitive>();
         List<Sphere> spheres = new List<Sphere>();
         Plane plane = new Plane(Vector3.Zero);
+        public Light light1;
 
         public void Init()
         {
-            spheres.Add(new Sphere(new Vector3(-5, 0, 10), 2f, new Vector3(1,0,0)));
-            spheres.Add(new Sphere(new Vector3(0, 0, -1), 2f, new Vector3(0,1,0)));
-            spheres.Add(new Sphere(new Vector3(5, 0, 0), 2f, new Vector3(0,0,1)));
+            spheres.Add(new Sphere(new Vector3(-3, 0, 5), 2f, new Vector3(1,0,0), Primitive.Material.diffuse));
+            spheres.Add(new Sphere(new Vector3(0, 0, 0), 2f, new Vector3(0,1,0), Primitive.Material.diffuse));
+            spheres.Add(new Sphere(new Vector3(3, 0, 5), 2f, new Vector3(0,0,1), Primitive.Material.glossy));
             foreach (Sphere s in spheres)
             {
                 primitives.Add(s);
             }
             primitives.Add(plane);
+            light1 = new Light(new Vector3(10, 10, -3), 0.5f);
         }
 
         public Intersection Intersect(Ray ray)

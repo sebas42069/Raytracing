@@ -48,14 +48,27 @@ namespace INFOGR2019Tmpl8
                         debugScreen.Line(MyApplication.TX(camera.position.X, debugScreen), MyApplication.TY(camera.position.Z, debugScreen),
                             MyApplication.TX(ray.position.X + ray.direction.X * ray.length, debugScreen), MyApplication.TY(ray.position.Z + ray.direction.Z * ray.length, debugScreen), MixColor(new Vector3(1,1,0)));
                     }
-
+                    
                     if (inter != null)
                     {
-                        rtScreen.Plot(x, y, MixColor(inter.primitive.color));
+                        Vector3 shadowDir = rtScene.light1.position - inter.position;
+                        float shadowLength = shadowDir.Length;
+                        shadowDir.NormalizeFast();
+                        float epsilon = 1f;
+
+                        float length = Vector3.Distance(inter.primitive.position + inter.primitive.radius * shadowDir, rtScene.light1.position);
+                        Ray shadowRay = new Ray(inter.position + shadowDir * epsilon, shadowDir, Math.Max(0, shadowLength - epsilon * 2));
+                        Intersection interShadow = rtScene.Intersect(shadowRay);
+                        Vector3 intensity = (1 - (shadowRay.length - length)) * new Vector3(rtScene.light1.intensity, rtScene.light1.intensity, rtScene.light1.intensity);
+                        if (interShadow != null)
+                        {
+                            rtScreen.Plot(x, y, 0);
+                        }
+                        else rtScreen.Plot(x, y, MixColor(inter.primitive.color * intensity));
                     }
                     else
                     {
-                        rtScreen.Plot(x, y, 0);
+                        rtScreen.Plot(x, y, MixColor(new Vector3 (0.3f, 0.3f, 0.3f)));
                     }
                 }
             }

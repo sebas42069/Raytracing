@@ -9,13 +9,14 @@ namespace INFOGR2019Tmpl8
 {
     class Sphere : Primitive
     {
-        public float radius;
+        // public float radius;
 
-        public Sphere (Vector3 pos, float rad, Vector3 col)
+        public Sphere (Vector3 pos, float rad, Vector3 col, Material m)
         {
             position = pos;
             radius = rad;
             color = col;
+            material = m;
         }
 
         public override Intersection IntersectWith(Ray ray)
